@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Converter</string>
+    <string name="button1">USD > EUR</string>
+    <string name="button2">EUR > USD</string>
+    <string name="button3">INCH > CM</string>
+    <string name="button4">CM > INCH</string>
+    <string name="your_input">Your input ...</string>
+    <string name="clear">Clear</string>
+    <string name="warningText">Please enter a valid number</string>
+</resources>

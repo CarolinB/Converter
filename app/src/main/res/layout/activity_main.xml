@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_gravity="center">
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="@string/your_input"
+        android:layout_marginTop="80dp"
+        android:inputType="number|numberDecimal|numberSigned"/>
+
+    <LinearLayout
+        android:id="@+id/buttonGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/input"
+        android:layout_marginTop="40dp">
+
+        <LinearLayout
+            android:id="@+id/buttonWrapper1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/usd2eurButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button1"
+                android:onClick="convert"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/textButton"/>
+
+            <Button
+                android:id="@+id/eur2usdButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button2"
+                android:onClick="convert"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/textButton"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonWrapper2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/inch2cmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button3"
+                android:onClick="convert"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/textButton"/>
+
+            <Button
+                android:id="@+id/cm2inchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button4"
+                android:onClick="convert"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/textButton"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonGroup"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible"
+        android:textSize="@dimen/resultTextSize"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/clear"
+        android:layout_below="@+id/result"
+        android:layout_marginTop="40dp"
+        android:layout_centerInParent="true"
+        android:onClick="clear"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@color/textButton"/>
+
+</RelativeLayout>
